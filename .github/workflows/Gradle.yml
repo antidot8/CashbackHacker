@@ -12,5 +12,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
+      - name: execution flag
+        run: chmod +x ./gradlew
       - name: Build with Gradle
-        run: chmod +x ./gradlew build connectedCheck
+        run: ./gradlew build
